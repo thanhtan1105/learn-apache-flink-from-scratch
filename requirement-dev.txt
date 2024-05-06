@@ -1,0 +1,3 @@
+-r requirement.txt
+apache-flink
+confluent_kafka
