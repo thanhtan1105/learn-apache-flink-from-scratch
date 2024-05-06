@@ -8,4 +8,9 @@ flink:
   environment_settings:
     streaming_mode: true
     use_blink_planner: true
-  pipeline_jars: file:///Users/lethanhtan/PycharmProjects/flink_kafka_to_kafka/packages/lib/flink-connector-kafka_2.12-1.14.6.jar;file:///Users/lethanhtan/PycharmProjects/flink_kafka_to_kafka/packages/lib/kafka-clients-2.4.1.jar
+  pipeline:
+    jars:
+    - file:///Users/lethanhtan/PycharmProjects/flink_kafka_to_kafka/packages/lib/flink-connector-kafka_2.12-1.14.6.jar
+    - file:///Users/lethanhtan/PycharmProjects/flink_kafka_to_kafka/packages/lib/kafka-clients-2.4.1.jar
+    - file:///Users/lethanhtan/PycharmProjects/flink_kafka_to_kafka/packages/lib/postgresql-42.6.2.jar
+    - file:///Users/lethanhtan/PycharmProjects/flink_kafka_to_kafka/packages/lib/flink-connector-jdbc_2.12-1.14.0.jar

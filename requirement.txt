@@ -2,3 +2,4 @@
 kafka-python==2.0.2
 psycopg2-binary==2.9.8
 psycopg2==2.9.8
+PyYAML

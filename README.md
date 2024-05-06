@@ -19,6 +19,10 @@ pip install -r requirement-dev.txt
 
 ## Lecture 1: Job read data from Kafka and write to PostgreSQL
 
+### Architecture - Data flow 
+
+![Lecture 01](./images/lecture01.png)
+
 ### Model ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 
 The `Stock` class in `app/model/stock.py` represents a stock with attributes `event_time`, `ticker`, and `price`. It also includes methods to create a dictionary representation of the object and to generate random stock data.
