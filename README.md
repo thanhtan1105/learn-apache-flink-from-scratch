@@ -1,6 +1,6 @@
-# Stock Data Pipeline ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![Kafka](https://img.shields.io/badge/Kafka-231F20?style=for-the-badge&logo=apache-kafka&logoColor=white) ![Flink](https://img.shields.io/badge/Flink-FF2E2E?style=for-the-badge&logo=apache-flink&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
+# Learn Apache Flink from scratch ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![Kafka](https://img.shields.io/badge/Kafka-231F20?style=for-the-badge&logo=apache-kafka&logoColor=white) ![Flink](https://img.shields.io/badge/Flink-FF2E2E?style=for-the-badge&logo=apache-flink&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
 
-This project is a data pipeline that reads stock data from a Kafka topic, processes it using Flink, and writes the results to a PostgreSQL database.
+This project is a data pipeline that reads data from a Kafka topic, processes it using Flink, and writes the results to a PostgreSQL database.
 
 ## Pre-requisites
 
