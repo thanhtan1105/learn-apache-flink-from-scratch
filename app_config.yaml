@@ -10,7 +10,22 @@ flink:
     use_blink_planner: true
   pipeline:
     jars:
-    - file:///Users/lethanhtan/PycharmProjects/flink_kafka_to_kafka/packages/lib/flink-connector-kafka_2.12-1.14.6.jar
-    - file:///Users/lethanhtan/PycharmProjects/flink_kafka_to_kafka/packages/lib/kafka-clients-2.4.1.jar
-    - file:///Users/lethanhtan/PycharmProjects/flink_kafka_to_kafka/packages/lib/postgresql-42.6.2.jar
-    - file:///Users/lethanhtan/PycharmProjects/flink_kafka_to_kafka/packages/lib/flink-connector-jdbc_2.12-1.14.0.jar
+    - file:////Users/tanle/Documents/ThanhTanLe/PycharmProjects/learn_apache_flink_from_scratch/packages/lib/flink-connector-kafka_1.16.3.jar
+    - file:////Users/tanle/Documents/ThanhTanLe/PycharmProjects/learn_apache_flink_from_scratch/packages/lib/kafka-clients-2.4.1.jar
+    - file:////Users/tanle/Documents/ThanhTanLe/PycharmProjects/learn_apache_flink_from_scratch/packages/lib/postgresql-42.6.2.jar
+    - file:////Users/tanle/Documents/ThanhTanLe/PycharmProjects/learn_apache_flink_from_scratch/packages/lib/flink-connector-jdbc_1.16.3.jar
+
+  checkpoint:
+    type: filesystem
+    storage: file:///Users/tanle/Documents/ThanhTanLe/PycharmProjects/learn_apache_flink_from_scratch/packages/flink-state-backend/checkpoints/
+    interval: 5000
+    timeout: 60000
+    max_concurrent: 1
+
+database:
+  host: localhost
+  port: 5432
+  database: finance_db
+  username: admin
+  password: 123456
+  url: jdbc:postgresql://localhost:5432/finance_db

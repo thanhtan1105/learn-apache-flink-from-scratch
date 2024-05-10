@@ -1,6 +1,7 @@
-KAFKA_CONFIG = {
-    'bootstrap_servers': 'localhost:9092',
-    'group_id': 'stock_group',
-    'scan_startup_mode': 'earliest-offset',
-    'topic': 'stock'
-}
+import yaml
+
+with open('app_config.yaml', 'r') as file:
+    config = yaml.safe_load(file)
+
+KAFKA_CONFIG = config['kafka']
+

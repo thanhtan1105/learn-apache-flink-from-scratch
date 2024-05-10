@@ -1,5 +1,6 @@
-POSTGREP_CONFIG = {
-    'host': 'localhost',
-    'port': '5432',
-    'database': 'finance_advise'
-}
+import yaml
+
+with open('app_config.yaml', 'r') as file:
+    config = yaml.safe_load(file)
+
+DATABASE_CONFIG = config['database']

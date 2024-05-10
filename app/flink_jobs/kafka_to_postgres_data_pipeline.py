@@ -1,28 +1,39 @@
 from pyflink.table import StreamTableEnvironment, EnvironmentSettings
-# from app.utils.kafka_config import KAFKA_CONFIG
-from ..utils.kafka_config import KAFKA_CONFIG
+from pyflink.datastream import CheckpointingMode, CheckpointConfig, StreamExecutionEnvironment, FileSystemCheckpointStorage
+from app.utils.kafka_config import KAFKA_CONFIG
+from app.utils.flink_config import FLINK_CONFIGURE
+from app.utils.database_config import DATABASE_CONFIG
+from app.model.stock import Stock
 
 topic = "stock"
 bootstrap_servers = KAFKA_CONFIG['bootstrap_servers']
-group_id = "stock_group"
+group_id = KAFKA_CONFIG['group_id']
 scan_startup_mode = KAFKA_CONFIG['scan_startup_mode']
 
-settings = EnvironmentSettings.new_instance().in_streaming_mode().use_blink_planner().build()
-t_env = StreamTableEnvironment.create(environment_settings=settings)
+# get the StreamExecutionEnvironment
+env = StreamExecutionEnvironment.get_execution_environment()
+
+# configure checkpointing
+(env.enable_checkpointing(FLINK_CONFIGURE['checkpoint']['interval'])
+ .get_checkpoint_config()
+ .set_checkpointing_mode(CheckpointingMode.EXACTLY_ONCE)
+ .enable_unaligned_checkpoints(True)
+ .set_checkpoint_timeout(FLINK_CONFIGURE['checkpoint']['timeout'])
+ .set_max_concurrent_checkpoints(FLINK_CONFIGURE['checkpoint']['max_concurrent'])
+ .set_checkpoint_storage(FileSystemCheckpointStorage(FLINK_CONFIGURE['checkpoint']['storage']))
+)
+
+settings = EnvironmentSettings.new_instance().in_streaming_mode().build()
+t_env = StreamTableEnvironment.create(env, environment_settings=settings)
 
 (t_env.get_config()
  .get_configuration()
- .set_string("pipeline.jars", "file:///Users/lethanhtan/PycharmProjects/flink_kafka_to_kafka/packages/lib/flink-connector-kafka_2.12-1.14.6.jar;"
-             + "file:///Users/lethanhtan/PycharmProjects/flink_kafka_to_kafka/packages/lib/kafka-clients-2.4.1.jar;"
-             + "file:///Users/lethanhtan/PycharmProjects/flink_kafka_to_kafka/packages/lib/postgresql-42.6.2.jar;"
-             + "file:///Users/lethanhtan/PycharmProjects/flink_kafka_to_kafka/packages/lib/flink-connector-jdbc_2.12-1.14.0.jar"
-               ))
+ .set_string("pipeline.jars", ';'.join(FLINK_CONFIGURE['pipeline']['jars']))
+ )
 
 kafka_source = """
 CREATE TABLE KafkaSource (
-    event_time STRING,
-    ticker STRING,
-    price DOUBLE
+    {}
 ) WITH (
     'connector' = 'kafka',
     'topic' = '{}',
@@ -31,24 +42,22 @@ CREATE TABLE KafkaSource (
     'scan.startup.mode' = '{}',
     'format' = 'json'
 )
-""".format(topic, bootstrap_servers, group_id, scan_startup_mode)
+""".format(Stock.asflink_structure(), topic, bootstrap_servers, group_id, scan_startup_mode)
 
 t_env.execute_sql(kafka_source)
 
 postgres_sink = """
 CREATE TABLE PostgresSink (
-    event_time Timestamp,
-    ticker STRING,
-    price DOUBLE
+    {}
 ) WITH (
     'connector' = 'jdbc',
-    'url' = 'jdbc:postgresql://localhost:5432/finance_advise',
-    'table-name' = 'stock',
-    'username' = 'admin',
-    'password' = '123456',
+    'url' = '{}',
+    'table-name' = 'public.stock_transaction',
+    'username' = '{}',
+    'password' = '{}',
     'driver' = 'org.postgresql.Driver'
 )
-"""
+""".format(Stock.aspostgres_structure(), DATABASE_CONFIG['url'], DATABASE_CONFIG['username'], DATABASE_CONFIG['password'])
 
 t_env.execute_sql(postgres_sink)
 
@@ -57,7 +66,13 @@ INSERT INTO PostgresSink
 select
     CAST(event_time AS TIMESTAMP) as event_time,
     ticker,
-    price
+    price,
+    volume,
+    open_price,
+    high,
+    low,
+    close_price,
+    adjusted_close
 from KafkaSource
 """)
 

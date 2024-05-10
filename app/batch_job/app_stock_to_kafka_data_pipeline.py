@@ -19,7 +19,9 @@ while True:
     for stock in stocks:
         message = json.dumps(stock.asdict()).encode('utf-8')
         producer.produce('stock', message)
+        break
     producer.flush()
     print("Complete batch: " + index.__str__())
     index += 1
+    break
     time.sleep(0.01)
