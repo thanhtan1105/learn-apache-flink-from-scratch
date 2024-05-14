@@ -1,43 +1,87 @@
-<mxfile host="app.diagrams.net" modified="2024-05-07T07:50:39.798Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0" etag="AHII10Tfse-WPrg12MK0" version="24.3.1" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-14T06:03:27.696Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="POrQyjHHG3Z8OTwKE3ct" version="24.3.1" type="device" pages="2">
   <diagram name="Lecture01" id="UmJ6IaSIyDyGGRNLVKWW">
-    <mxGraphModel dx="1721" dy="582" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2105" dy="877" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="1EJF7MyEtzb5TWif7MIC-14" value="Lecture 01" style="rounded=1;whiteSpace=wrap;html=1;arcSize=3;verticalAlign=top;" vertex="1" parent="1">
+        <mxCell id="1EJF7MyEtzb5TWif7MIC-14" value="Lecture 01" style="rounded=1;whiteSpace=wrap;html=1;arcSize=3;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="-10" y="152" width="700" height="236" as="geometry" />
         </mxCell>
-        <mxCell id="1EJF7MyEtzb5TWif7MIC-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="1EJF7MyEtzb5TWif7MIC-8" target="1EJF7MyEtzb5TWif7MIC-10">
+        <mxCell id="1EJF7MyEtzb5TWif7MIC-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="1EJF7MyEtzb5TWif7MIC-8" target="1EJF7MyEtzb5TWif7MIC-10" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="1EJF7MyEtzb5TWif7MIC-8" value="Flink&amp;nbsp;&lt;div&gt;Streaming&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+        <mxCell id="1EJF7MyEtzb5TWif7MIC-8" value="Flink&amp;nbsp;&lt;div&gt;Streaming&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="380" y="210" width="110" height="118" as="geometry" />
         </mxCell>
-        <mxCell id="1EJF7MyEtzb5TWif7MIC-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="1EJF7MyEtzb5TWif7MIC-7" target="1EJF7MyEtzb5TWif7MIC-8">
+        <mxCell id="1EJF7MyEtzb5TWif7MIC-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="1EJF7MyEtzb5TWif7MIC-7" target="1EJF7MyEtzb5TWif7MIC-8" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="1EJF7MyEtzb5TWif7MIC-7" value="Apache Kafka" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+        <mxCell id="1EJF7MyEtzb5TWif7MIC-7" value="Apache Kafka" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="210" y="210" width="110" height="118" as="geometry" />
         </mxCell>
-        <mxCell id="1EJF7MyEtzb5TWif7MIC-2" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Apache_kafka-icon.svg/2048px-Apache_kafka-icon.svg.png;" vertex="1" parent="1">
+        <mxCell id="1EJF7MyEtzb5TWif7MIC-2" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Apache_kafka-icon.svg/2048px-Apache_kafka-icon.svg.png;" parent="1" vertex="1">
           <mxGeometry x="235" y="250" width="60" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="1EJF7MyEtzb5TWif7MIC-3" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://flink.apache.org/img/logo/png/500/flink_squirrel_500.png;" vertex="1" parent="1">
+        <mxCell id="1EJF7MyEtzb5TWif7MIC-3" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://flink.apache.org/img/logo/png/500/flink_squirrel_500.png;" parent="1" vertex="1">
           <mxGeometry x="411" y="256" width="48" height="48" as="geometry" />
         </mxCell>
-        <mxCell id="1EJF7MyEtzb5TWif7MIC-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="1EJF7MyEtzb5TWif7MIC-5" target="1EJF7MyEtzb5TWif7MIC-7">
+        <mxCell id="1EJF7MyEtzb5TWif7MIC-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="1EJF7MyEtzb5TWif7MIC-5" target="1EJF7MyEtzb5TWif7MIC-7" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="1EJF7MyEtzb5TWif7MIC-5" value="Raw data" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+        <mxCell id="1EJF7MyEtzb5TWif7MIC-5" value="Raw data" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="20" y="210" width="110" height="118" as="geometry" />
         </mxCell>
-        <mxCell id="1EJF7MyEtzb5TWif7MIC-4" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/267_Python-512.png;" vertex="1" parent="1">
+        <mxCell id="1EJF7MyEtzb5TWif7MIC-4" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/267_Python-512.png;" parent="1" vertex="1">
           <mxGeometry x="49" y="243" width="52" height="52" as="geometry" />
         </mxCell>
-        <mxCell id="1EJF7MyEtzb5TWif7MIC-10" value="Storage" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=22.230769230769084;verticalAlign=middle;" vertex="1" parent="1">
+        <mxCell id="1EJF7MyEtzb5TWif7MIC-10" value="Storage" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=22.230769230769084;verticalAlign=middle;" parent="1" vertex="1">
           <mxGeometry x="570" y="210" width="90" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="1EJF7MyEtzb5TWif7MIC-11" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/800px-Postgresql_elephant.svg.png;" vertex="1" parent="1">
+        <mxCell id="1EJF7MyEtzb5TWif7MIC-11" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/800px-Postgresql_elephant.svg.png;" parent="1" vertex="1">
+          <mxGeometry x="602.39" y="224" width="25.21" height="26" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="WOYOiMmLbhPuajO04gCg" name="Lecture02">
+    <mxGraphModel dx="1660" dy="566" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="AVHLHt_ILQRiUecTw4V0-1" value="Lecture 02" style="rounded=1;whiteSpace=wrap;html=1;arcSize=3;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="-10" y="152" width="700" height="236" as="geometry" />
+        </mxCell>
+        <mxCell id="AVHLHt_ILQRiUecTw4V0-2" value="JDBC&lt;div style=&quot;font-size: 9px;&quot;&gt;connector&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=9;" edge="1" parent="1" source="AVHLHt_ILQRiUecTw4V0-3" target="AVHLHt_ILQRiUecTw4V0-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AVHLHt_ILQRiUecTw4V0-3" value="Flink&amp;nbsp;&lt;div&gt;Streaming&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="380" y="210" width="110" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="AVHLHt_ILQRiUecTw4V0-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="AVHLHt_ILQRiUecTw4V0-5" target="AVHLHt_ILQRiUecTw4V0-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AVHLHt_ILQRiUecTw4V0-5" value="Apache Kafka" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="210" y="210" width="110" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="AVHLHt_ILQRiUecTw4V0-6" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Apache_kafka-icon.svg/2048px-Apache_kafka-icon.svg.png;" vertex="1" parent="1">
+          <mxGeometry x="235" y="250" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AVHLHt_ILQRiUecTw4V0-7" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://flink.apache.org/img/logo/png/500/flink_squirrel_500.png;" vertex="1" parent="1">
+          <mxGeometry x="411" y="256" width="48" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="AVHLHt_ILQRiUecTw4V0-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="AVHLHt_ILQRiUecTw4V0-9" target="AVHLHt_ILQRiUecTw4V0-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AVHLHt_ILQRiUecTw4V0-9" value="Raw data" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="20" y="210" width="110" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="AVHLHt_ILQRiUecTw4V0-10" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/267_Python-512.png;" vertex="1" parent="1">
+          <mxGeometry x="49" y="243" width="52" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="AVHLHt_ILQRiUecTw4V0-11" value="Storage&lt;div&gt;(Upsert)&lt;/div&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=22.230769230769084;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="570" y="210" width="90" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="AVHLHt_ILQRiUecTw4V0-12" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/800px-Postgresql_elephant.svg.png;" vertex="1" parent="1">
           <mxGeometry x="602.39" y="224" width="25.21" height="26" as="geometry" />
         </mxCell>
       </root>
