@@ -110,3 +110,17 @@ class Stock:
             close_price DOUBLE PRECISION,
             adjusted_close DOUBLE PRECISION
         """
+
+    @staticmethod
+    def aspostgres_stock_structure():
+        return """
+            ticker VARCHAR(10) PRIMARY KEY,
+            price DOUBLE PRECISION,
+            volume INTEGER,
+            open_price DOUBLE PRECISION,
+            high DOUBLE PRECISION,
+            low DOUBLE PRECISION,
+            close_price DOUBLE PRECISION,
+            adjusted_close DOUBLE PRECISION
+        """
+

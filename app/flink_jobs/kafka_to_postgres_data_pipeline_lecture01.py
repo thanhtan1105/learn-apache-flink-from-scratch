@@ -20,7 +20,7 @@ env = StreamExecutionEnvironment.get_execution_environment()
  .enable_unaligned_checkpoints(True)
  .set_checkpoint_timeout(FLINK_CONFIGURE['checkpoint']['timeout'])
  .set_max_concurrent_checkpoints(FLINK_CONFIGURE['checkpoint']['max_concurrent'])
- .set_checkpoint_storage(FileSystemCheckpointStorage(FLINK_CONFIGURE['checkpoint']['storage']))
+ .set_checkpoint_storage(FileSystemCheckpointStorage(FLINK_CONFIGURE['checkpoint']['storage_lecture01']))
 )
 
 settings = EnvironmentSettings.new_instance().in_streaming_mode().build()
@@ -46,8 +46,8 @@ CREATE TABLE KafkaSource (
 
 t_env.execute_sql(kafka_source)
 
-postgres_sink = """
-CREATE TABLE PostgresSink (
+postgres_stock_transaction_sink = """
+CREATE TABLE PostgresStockTransactionSink (
     {}
 ) WITH (
     'connector' = 'jdbc',
@@ -59,10 +59,10 @@ CREATE TABLE PostgresSink (
 )
 """.format(Stock.aspostgres_structure(), DATABASE_CONFIG['url'], DATABASE_CONFIG['username'], DATABASE_CONFIG['password'])
 
-t_env.execute_sql(postgres_sink)
+t_env.execute_sql(postgres_stock_transaction_sink)
 
-result = t_env.execute_sql("""
-INSERT INTO PostgresSink
+t_env.execute_sql("""
+INSERT INTO PostgresStockTransactionSink
 select
     CAST(event_time AS TIMESTAMP) as event_time,
     ticker,
@@ -74,6 +74,4 @@ select
     close_price,
     adjusted_close
 from KafkaSource
-""")
-
-result.get_job_client().get_job_execution_result().result()
+""").get_job_client().get_job_execution_result().result()

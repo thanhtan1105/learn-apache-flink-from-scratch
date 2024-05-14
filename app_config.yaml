@@ -17,7 +17,8 @@ flink:
 
   checkpoint:
     type: filesystem
-    storage: file:///Users/tanle/Documents/ThanhTanLe/PycharmProjects/learn_apache_flink_from_scratch/packages/flink-state-backend/checkpoints/
+    storage_lecture01: file:///Users/tanle/Documents/ThanhTanLe/PycharmProjects/learn_apache_flink_from_scratch/packages/flink-state-backend/checkpoints/lecture01
+    storage_lecture02: file:///Users/tanle/Documents/ThanhTanLe/PycharmProjects/learn_apache_flink_from_scratch/packages/flink-state-backend/checkpoints/lecture02
     interval: 5000
     timeout: 60000
     max_concurrent: 1

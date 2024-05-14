@@ -23,5 +23,4 @@ while True:
     producer.flush()
     print("Complete batch: " + index.__str__())
     index += 1
-    break
     time.sleep(0.01)
